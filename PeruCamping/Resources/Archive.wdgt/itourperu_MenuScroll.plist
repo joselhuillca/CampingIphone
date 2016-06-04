@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>ID</key>
+		<string>ISSUE1_2011</string>
+		<key>Release date</key>
+		<date>2011-01-05T15:03:12Z</date>
+		<key>model</key>
+		<dict>
+			<key>mainMenu</key>
+			<dict>
+				<key>class</key>
+				<string>UIBaseView</string>
+				<key>navigability</key>
+				<string>mainMenu</string>
+				<key>style</key>
+				<string>mainMenu</string>
+				<key>subviews</key>
+				<array>
+					<dict>
+						<key>actualPage</key>
+						<string>0</string>
+						<key>class</key>
+						<string>MenuScrollView</string>
+						<key>name</key>
+						<string>menu_scroll_view</string>
+						<key>navigability</key>
+						<string>menu_scroll_view</string>
+						<key>style</key>
+						<string>menu_scroll_view</string>
+						<key>subviews</key>
+						<array>
+							<dict>
+								<key>class</key>
+								<string>UIBaseView</string>
+								<key>name</key>
+								<string>menu_home</string>
+								<key>navigability</key>
+								<string>menu_home</string>
+								<key>style</key>
+								<string>menu_home</string>
+								<key>subviews</key>
+								<array>
+									<dict>
+										<key>class</key>
+										<string>UIBaseView</string>
+										<key>style</key>
+										<string>menu_logo_2</string>
+									</dict>
+								</array>
+								<key>title</key>
+								<string>home menu</string>
+							</dict>
+							<dict>
+								<key>class</key>
+								<string>UIBaseView</string>
+								<key>name</key>
+								<string>menu_avatars</string>
+								<key>navigability</key>
+								<string>menu_avatars</string>
+								<key>style</key>
+								<string>menu_avatars</string>
+								<key>subviews</key>
+								<array>
+									<dict>
+										<key>class</key>
+										<string>UIBaseView</string>
+										<key>style</key>
+										<string>menu_logo_1</string>
+									</dict>
+								</array>
+								<key>title</key>
+								<string>avatars menu</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>class</key>
+						<string>UIBaseView</string>
+						<key>style</key>
+						<string>menu_logo</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+</array>
+</plist>

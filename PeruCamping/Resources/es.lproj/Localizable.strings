@@ -1,0 +1,67 @@
+/* 
+ Localizable.strings
+ itourperu
+ 
+ Created by Yuber on 3/5/12.
+ Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+ */
+"language" = "es";
+"Allachaqui" = "<title>Allachaqui</title>\nEstos <_link>Sacharrunas|Sacharrunas</_link> también son hermanos y aunque no son gemelos se complementan perfectamente, les gusta torturar a sus víctimas, su fuerza radica en su velocidad capaces incluso de desaparecer si lo desean, son los más cercanos al <_link>Qanla|Qanla</_link>.";
+"Antahualla" = "<title>Antahualla</title>\nCon apariencia de un gato silvestre y rasgos humanos, aparece en pozos encantados y en el <_link>Lago Titicaca|Lago Titicaca</_link> el cual es como su hogar, su cola brilla como fuego fuera y dentro del agua, en un inicio el era el guardián de la huaraca sagrada de <_link>Ayar Cachi|Ayar Cachi</_link>.";
+"Apu" = "<title>Apu</title>\nMontaña Sagrada.";
+"Ayar Auca" = "<title>Ayar Auca</title>\n<_link>Ayar Auca|Ayar Auca</_link> es muy hábil y da saltos tan altos que parece volar, la curiosidad propia de su juventud lo hace inquieto e impulsivo.";
+"Ayar Cachi" = "<title>Ayar Cachi</title>\nEl mayor y más fuerte de los Ayar, junto a sus hermanos le es encomendada la misión de liberar al mundo terrenal de la oscuridad conocida como C`amacpacha y fundar el imperio Inka, en <_link>Ayar Cachi|Ayar Cachi</_link> recae la mayor responsabilidad pues sus hermanos creen que él es quien los guiara en su difícil tarea dada por el <_link>Inti|Inti</_link>.";
+"Ayar Manco" = "<title>Ayar Manco</title>\n<_link>Ayar Manco|Ayar Manco</_link> es un gran estratega y admira mucho a <_link>Ayar Cachi|Ayar Cachi</_link> del cual aprendió casi todo, sin embargo no cree estar listo para asumir el liderazgo; el destino le tiene muchas sorpresas y será el quien se encargue de liberar una de las batallas que decidirán el futuro de la estirpe inkaica.  ";
+"Ayar Uchu" = "<title>Ayar Uchu</title>\n<_link>Ayar Uchu|Ayar Uchu</_link> es muy temperamental y capaz de recorrer distancias en poco tiempo gracias a su extraordinaria velocidad, cuando algo muy importante esta por suceder";
+"Camacpacha" = "<title>Camacpacha</title>\nTiempos de oscuridad.";
+"Camaquen" = "<title>Camaquen</title>\nEnergía vital del Inca, conocida también como camasaca.";
+"Cerro Tamputoco" = "<title>Cerro Tamputoco</title>\nPortal con tres ventanas sagradas, a través de las cuales salieron los legendarios Hermanos Ayar para cumplir con su destino.";
+"Chancas" = "<title>Chancas</title>\nTribu étnica de Perú, enemigos de los Incas.";
+"Chullachaqui" = "<title>Chullachaqui</title>\nSon <_link>Sacharrunas|Sacharrunas</_link>, diablillos, son hermanos gemelos los cuales son reclutados por el <_link>Qanla|Qanla</_link>; a pesar de ser gemelos tienen diferencias, por un lado <_link>Llullachaqui|Llullachaqui</_link> hace un sonido de burla \"wark-wark\" y tiene ojos de color rojo; mientras que <_link>Chullachaqui|Chullachaqui</_link> es el más fuerte y tiene ojos azules, su sonido de burla es \"ñek-ñek\".";
+"Chullpas" = "<title>Chullpas</title>\nSon muertos en vida, carecen de alma, pues con ella pagaron el precio del poder ofrecido por Huallullo Carhuincho, son dirigidos por los <_link>Sacharrunas|Sacharrunas</_link> y forman un gran ejército que producen terror en los pueblos andinos. Se dice que los <_link><_link>Chullpas|Chullpas</_link>|<_link>Chullpas|Chullpas</_link></_link> se hacen más fuertes cuando se les tiene miedo.";
+"Collachaqui" = "<title>Collachaqui </title>\nEstos <_link>Sacharrunas|Sacharrunas</_link> también son hermanos y aunque no son gemelos se complementan perfectamente, les gusta torturar a sus víctimas, su fuerza radica en su velocidad capaces incluso de desaparecer si lo desean, son los más cercanos al <_link>Qanla|Qanla</_link>.";
+"Condor" = "<title>Condor</title>\n<_link>Condor|Condor</_link> andino, especie Vulture americana, cosiderada como Dios de los Incas.";
+"Sipan" = "<title>El Señor de Sipan</title>\nFue un antiguo y muy respetado gobernador de la cultura Mochica, su muerte dolió tanto a su pueblo que el Dios <_link>Wiracocha|Wiracocha</_link> le permitió regresar al <_link>Kaypacha|Kaypacha</_link>, siempre está acompañado de sus fieles mascotas, creó las Wallqas de poder para los herederos del sol.";
+"Gentiles" = "<title>Gentiles</title>\nSon gigantes muy poderosos,seres desalmados capaces de matarse y comerse entre sí, forman parte del ejército del <_link>Qanla|Qanla</_link> quien los castiga convirtiendo sus huesos en polvo, pero la extraña habilidad regenerativa, asi como para ver el futuro hace que esta maldición no les afecte del todo, ahora quedan sus gigantescos huesos, los cuales cobran vida cada noche sin luna.";
+"Hananpacha" = "<title>Hananpacha</title>\nEl mundo de arriba.";
+"Huaca" = "<title>Huaca</title>\nTemplo sagrado.";
+"Huacachina" = "<title>Huacachina</title>\nConocida también como a princesa de arena, descendiente de la cultura nazca, se dice que era la mujer mas hermosa del mundo andino y que cuya belleza era admirada por el mismo dios Celestial, esta hermosa mujer tenía el don de crear lagunas con sus lagrimas.";
+"Huallullo Carhuinchu" = "<title>Huallullo Carhuinchu</title>\nPrimogénito del dios creador <_link>Wiracocha|Wiracocha</_link> y hermano de <_link>Inti|Inti</_link>, abandonó el Jananpacha para gobernar el <_link>Kaypacha|Kaypacha</_link> donde es corrompido por su propia ambición, y sume al mundo en las tinieblas del C`amacpacha, la oscuridad lo hizo tan fuerte que no le costó vencer a su hermano <_link>Inti|Inti</_link>, tomando desde ese momento el nombre de <_link>Qanla|Qanla</_link>.";
+"Huillac Umu" = "<title>Huillac Umu</title>\nEs el mejor ejemplo de la religión inca, es el Sumo Sacerdote, hermano del Inca y su gran consejero";
+"Inti" = "<title>Inti</title>\nPadre Sol";
+"Ishi" = "<title>Ishi</title>\nSirviente de <_link>Qanla|Qanla</_link>.";
+"Kallpasapa huaraca" = "<title>Kallpasapa huaraca</title>\nPoder de <_link>Ayar Cachi|Ayar Cachi</_link>, palabra quechua para liberar energía.";
+"Katari" = "<title>Katari</title>\nSapo de dos cabezas que habita el <_link>Lago Titicaca|Lago Titicaca</_link>, su cabeza del lado izquierdo puede leer pensamientos, pero no puede escuchar las voces exteriores; por otro lado la cabeza derecha si puede escuchar las voces exteriores, pero no los pensamientos.";
+"Kaypacha" = "<title>Kaypacha</title>\nEl mundo intermedio.";
+"Kitupay" = "<title>Kitupay</title>\nEl es un sirviente de <_link>Katari|Katari</_link>.";
+"Lago Titicaca" = "<title>Lago Titicaca</title>\nEl <_link>Lago Titicaca|Lago Titicaca</_link> es un cuerpo de agua ubicado en la meseta del Collao en los Andes Centrales a una altura promedio de 3812 msnm entre los territorios de Bolivia y Perú..";
+"Layhka Limppu" = "<title>Layhka Limppu</title>\nEs un anciano sabio que dirigió a los pobladores de <_link>PacariTambo|PacariTambo</_link> en defensa al ataque de los Chulpas, Layhka tiene una conexión especial con el <_link>Kaypacha|Kaypacha</_link> y tiene comunicación directa con los <_link>Apu|Apu</_link>s, encargado de proteger el <_link>Apu|Apu</_link> Tamputoco para que puedan llegar los hijos del dios <_link>Inti|Inti</_link>.";
+"Llullachaqui" = "<title>Llullachaqui</title>\nSon <_link>Sacharrunas|Sacharrunas</_link>, diablillos, son hermanos gemelos los cuales son reclutados por el <_link>Qanla|Qanla</_link>; a pesar de ser gemelos tienen diferencias, por un lado <_link>Llullachaqui|Llullachaqui</_link> hace un sonido de burla \"wark-wark\" y tiene ojos de color rojo; mientras que <_link>Chullachaqui|Chullachaqui</_link> es el más fuerte y tiene ojos azules, su sonido de burla es \"ñek-ñek\".";
+"Mama Cora" = "<title>Mama Cora</title>\nEsposa de <_link>Ayar Cachi|Ayar Cachi</_link>, es la más delicada de las hermanas y siempre está a su lado, pues con el se siente segura y protegida.";
+"Mama Huaco" = "<title>Mama Huaco</title>\nEsposa de <_link>Ayar Auca|Ayar Auca</_link>, la encargada de controlarlo lo cual es una tarea muy difícil de cumplir, <_link>Mama Huaco|Mama Huaco</_link> es la más fuerte de las hermanas, pues en los momentos más difíciles posee un increíble liderazgo y control de su poder, lo cual la hace temida y respetada por todos.";
+"Mama Ocllo" = "<title>Mama Ocllo</title>\nEsposa de <_link>Ayar Manco|Ayar Manco</_link>, es su complemento perfecto y su mejor consejera cuando las cosas se dificultan.";
+"Mama Rahua" = "<title>Mama Rahua</title>\n<_link>Mama Rahua|Mama Rahua</_link>, esposa de <_link>Ayar Uchu|Ayar Uchu</_link>, es muy calmada y tiene una conexión especial con las fuerzas de la naturaleza lo que le ayuda en las labores agrícolas.";
+"Marastoco" = "<title>Marastoco</title>\nVentana a través de la cual llegaron los hermanos Ayar.";
+"Pacaritambo" = "<title>Pacaritambo</title>\nLocalizado a 12 leguas al noreste de Cusco.Aqui se encuentra situado el portal de Tamputoco.";
+"Pampamisayoq" = "<title>Pampamisayoq</title>\nUn sacerdote andino y vidente que puede hablar con los <_link>Apu|Apu</_link>s.";
+"Portal del Sol" = "<title>Portal del Sol</title>\nEste Portal conecta el <_link>Hananpacha|Hananpacha</_link> con el <_link>Kaypacha|Kaypacha</_link>, se encuentra cerca del <_link>Lago Titicaca|Lago Titicaca</_link>. A través de este portal escapo <_link>Huallullo Carhuinchu|Huallullo Carhuinchu</_link> matando al guardian <_link>Pukamaru|Pukamaru</_link>. Asi mismo por este portal paso <_link>Inti|Inti</_link> para detener a su hermano.";
+"Pukamaru" = "<title>Pukamaru</title>\nGuardian de la Portada del Sol.";
+"Pururauca" = "<title>Pururauca</title>\nEstado emocional de los Incas en el que dominan el miedo.";
+"Pututero" = "<title>Pututero</title>\nEl encargado de tocar un isntrumento de viento en ciertas ocaciones. ";
+"Qanla" = "<title>Qanla</title>\nEl demonio.";
+"Qhawa" = "<title>Qhawa</title>\nQue en lenguaje andino significaba \"la que vigila\" es una guerra Chavín que es perseguida por su propio pueblo debido a que robo el preciado lanzón del dios irritado (lanzón monolítico), el cual se hereda de padre a primogénito varón.";
+"Sacharrunas" = "<title>Sacharrunas</title>\nSeres místicos que viven en las montañas.";
+"Tambo" = "<title>Tambo</title>\n<_link>Tambo|Tambo</_link>, como le dice cariñosamente su maestro <_link>Layhka Limppu|Layhka Limppu</_link>, es un joven con mucho talento, esto contrasta con sus inseguridades, miedos y su obsesión de buscar amor, fue encontrado por Layhka cuando era niño en un poblado al sur de <_link>PacariTambo|PacariTambo</_link> quien decidió tomarlo como aprendiz. ayllu";
+"Tambochacay" = "<title>Tambochacay</title>\n<_link>Tambo|Tambo</_link>, como le dice cariñosamente su maestro <_link>Layhka Limppu|Layhka Limppu</_link>, es un joven con mucho talento, esto contrasta con sus inseguridades, miedos y su obsesión de buscar amor, fue encontrado por Layhka cuando era niño en un poblado al sur de <_link>PacariTambo|PacariTambo</_link> quien decidió tomarlo como aprendiz.";
+"Tatay" = "<title>Tatay</title>\nSeñor.";
+"Templo de Wiracocha" = "<title>Templo de Wiracocha</title>\nUna poderosa fortaleza que contiene riquezas de objetos divinos tales como el Puma de Piedra codiciado que concede la sabiduría a su protector.";
+"Tsunki" = "<title>Tsunki</title>\nEl señor de los ríos, y guardián del Puquio de Guanacaure tiene a su protección los bastones dorados, es un poderoso guerrero, se convierte en varias corvinas doradas que pueden nadar incluso por los desiertos.";
+"Tullumachu" = "<title>Tullumachu</title>\nOtro nombre de las <_link><_link>Chullpas|Chullpas</_link>|<_link>Chullpas|Chullpas</_link></_link>";
+"Tunche" = "<title>Tunche</title>\nEs el demonio que vaga a través de la exótica selva y toma la vida de todo aquel que se interne en la espesa vegetación; se acerca lentamente a sus víctimas sin emitir sonido alguno, sin embargo algunos reconocen una especie de piar-silbido el cual atrae al <_link>Tunche|Tunche</_link> hasta su víctima.";
+"Ukjupacha" = "<title>Ukjupacha</title>\nEl mundo de Abajo.";
+"Uququ" = "<title>Uququ</title>\nthe Raza de los sapos.";
+"Wiracocha" = "<title>Wiracocha</title>\nPadre de los Dioses.";
+"Yanapuma" = "<title>Yanapuma</title>\nEs un puma negro que toma forma humana, con rasgos no propios del mundo andino, con un poder realmente incontrolable fue víctima de uno de los engaños del <_link>Qanla|Qanla</_link> quien lo vio como un gran peligro para sus fines y lo apreso en el laberinto Qenko del cual no puede salir por una poderosa maldición.";
+
+"exit" = "Salir";
+"buy" = "Comprar";

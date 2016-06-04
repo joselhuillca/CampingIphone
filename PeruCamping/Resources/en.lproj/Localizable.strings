@@ -1,0 +1,124 @@
+/* 
+ Localizable.strings
+ itourperu
+ 
+ Created by Yuber on 3/5/12.
+ Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+ */
+"language" = "en";
+"Allachaqui" = "<title>Said Bin Zail</title> <italic></italic> \nQuiet and silent, merely obeying orders and not question anything because he is sure of the path followed.
+";
+"Antahualla" = "<title>Antahualla</title>\nA creature that has the appearance of a wild cat but with some human features and appears only on both enchanted wells and <_link>Lake Titicaca|Lake Titicaca</_link>. People who rarely see him say that he looks like a shooting star on the water, because his tail shimmers like fire.
+";
+"Apu" = "<title>Apu</title> <italic>(AH poo)</italic> \nA sacred ridge.
+";
+"Ayar Auca" = "<title>Abu Bakr</title> <italic></italic> \nGreat respect by all his friends and great devotion to Allah and the Prophet, is one of the most feared warriors for their strategies and their lethal skills because despite having different weapons like fighting without them if not necessary .
+";
+"Ayar Cachi" = "<title>Bilal</title> <italic></italic> \nBecause it was the slave of Umaiya Ibn Jalaf is very shy, but his faith in Allah and the prophet do overcome any fear, is very careful with their peers and one could say that the most devout of all, a great friend of the prophet Mohammed.
+";
+"Ayar Manco" = "<title>Ibn Mas Ud</title>\nFor his youth he is brash and does not measure the consequences for their actions, is able to kill without mercy all those who oppose Allah and his prophet.
+";
+"Ayar Uchu" = "<title>Abu Yahl Ibn Hisham Al Majzumi</title> <italic></italic> \nHe is a born leader and never runs away from a war when it arises, very stubborn able to kill his own allies if needed.
+";
+"Ayllu" = "<title>Ayllu</title> <italic>(EYE joo)</italic> \nA group of families.
+";
+"Camacpacha" = "<title>Camacpacha</title>\n the dark times.
+";
+"Camaquen" = "<title>Camaquen</title> <italic>(ka ma KEN)</italic> \nThe Inca's vital force also known as Camasaca.
+";
+"Chancas" = "<title>Chancas</title>\nAn ethnic group in Peru who were enemies of the  Incas
+";
+"Chullachaqui" = "<title>Chullachaqui</title> <italic>(choo jah CHA kee)</italic> \nOne of the <_link>Sacharrunas|Sacharrunas</_link> that is called in by <_link>Qanla|Qanla</_link> because of his incredible power. Although he's <_link>Llullachaqui|Llullachaqui's</_link> twin brother, there are some characteristics that make them different: <_link>Llullachaqui|Llullachaqui</_link> constantly makes a scoffing noise \"wark, wark,\" while <_link>Chullachaqui|Chullachaqui's</_link> mocking sound is \"meck, meck\".
+";
+"Chullpas" = "<title>Tal Hah Bin Ubaildullah</title>\nIt is very serious, almost nobody has seen him laugh, a good researcher and always get successfully the missions is given.
+";
+"Collachaqui" = "<title>Collachaqui</title> <italic>(kaw jah CHA kee)</italic> \n<_link>Allachaqui|Allachaqui's</_link> brother and one of the <_link>Sacharrunas|Sacharrunas</_link>. Although they are not twins, they complement each other perfectly. They enjoy torturing their victims and are the ones closest to <_link>Qanla|Qanla</_link> who allows them free rein to their twisted imagination when tormenting people.
+";
+"Condor" = "<title>Condor</title>\nA South American vulture considered an Inca god.";
+"Gentiles" = "<title>Gentiles</title> <italic>(hen TEE less)</italic> \nGiants that are conjured up by <_link>Qanla|Qanla</_link> but hate following orders. This unleashes <_link>Qanla|Qanla's</_link> rage and he punishes them by turning their bones to dust; nonetheless, their strange abilities to both regenerate and see the future render this curse almost ineffective.
+";
+"Hananpacha" = "<title>Hananpacha</title>\nThe higher world.
+";
+"Huaca" = "<title>Huaca</title> <italic>(WAH kah)</italic> \nA sacred temple.
+";
+"Huacachina" = "<title>Huacachina</title> <italic>(wa kah CHEE nah)</italic> \nAlso known as the sand princess. She is descended from the nazca culture and is believed to have been the most beautiful woman in the andean world. It's possible that even the celestial god himself admired her beauty.
+";
+"Huallullo Carhuinchu" = "<title>Huallullo carhuinchu</title> <italic>(wa JOO jaw-kar WEEN choo)</italic> \nFirstborn son of the creator god <_link>Wiracocha|Wiracocha</_link> and <_link>Inti|Inti's</_link> brother. Against his father's will, he abandoned the <_link>Hananpacha|Hananpacha</_link> to govern the <_link>Kaypacha|Kaypacha</_link> where he was corrupted by his own ambition, thus he submerged the world into the shadows of <_link>Camacpacha|Camacpacha</_link>.
+";
+"Huillac Umu" = "<title>Huillac Umu</title> <italic>(wee JACK-OO moo)</italic> \nThe High priest who is considered the Inca's brother and counselor.
+";
+"Inti" = "<title>Inti</title> <italic>(EEN tee)</italic> \nFather Sun.
+";
+"Ishi" = "<title>Ishi</title>\nOne of <_link>Qanla|Qanla's</_link> servants.
+";
+"Kallpasapa Huaraca" = "<title>Kallpasapa Huaraca</title> <italic>(kal pa SA pa-wa RA ka)</italic> \n<_link>Ayar Cachi|Ayar Cachi's</_link> personal power and also quechua words for sling of power:
+";
+"Katari" = "<title>Umaiya Ibn Jalaf</title> <italic></italic> \nCoward and liar, he loves torturing their slaves, not fight, but always related to mighty warriors who defend it.
+";
+"Kaypacha" = "<title>Kaypacha</title> <italic>(ky PAH cha)</italic> \nThe in-between world.
+";
+"Kitupay" = "<title>Kitupay</title> <italic>(kee too PIE)</italic> \n<_link>Katari|Katari's</_link> servant.
+";
+"Lake Titicaca" = "<title>Lake Titicaca</title>\nA body of water located on the Collao Plateau in the central Andes. This impressive lake is attributed healing powers and it's the habitat of two warrior species: the Frogs and the Toads, which are always at war over the Temple of <_link>Wiracocha|Wiracocha</_link> that lies at the bottom of the lake.
+";
+"Layhka Limppu" = "<title>Layhka Limppu</title> <italic>(LY kah-LEEM poo)</italic> \nA wise old man who led the inhabitants of <_link>PacariTambo|PacariTambo</_link> in the defense against the <_link>Chullpas|Chullpas</_link>. Layhka has both a special connection to the <_link>Kaypacha|Kaypacha</_link> and direct communication with the <_link>Apu|Apu</_link>s (the sacred ridges). He was given a warning that allowed him to protect <_link>Apu Tamputoco|Apu Tamputoco</_link>   just in time for the arrival of god <_link>Inti|Inti's</_link> sons and daughters. 
+";
+"Llullachaqui" = "<title>Sa’d Bin Mu’adh</title> <italic></italic> \nLoyal to the cause of Allah and his prophet and is willing to give his life for them without hesitation, also his joy in every situation like this is unfavorable energy spreads to all.
+";
+"Mama Cora" = "<title>Dam Dam Bin’amr</title>\nTry to get along with everyone, especially with your boss <_link>Mama Huaco|Abu Sufyan</_link>, his lies and deceptions do an unreliable fellow being.
+";
+"Mama Huaco" = "<title>Abu Sufyan Ibn Harb </title> <italic></italic> \nHis leadership it became one of the most appreciated figures with Qoresh, but fears for the growth of the followers of Allah became a very aggressive person, appreciates above all the wealth and luxuries.
+";
+"Mama Ocllo" = "<title>Migdad Bin‘amr</title> <italic></italic> \nHis loyalty to his peers is worthy of admiration well as devotion to Allah and his prophet.
+";
+"Mama Rahua" = "<title>Al Aswad Bin Addul</title> <italic></italic> \nIt is a disaster to the point he has no friends and is detested by the Qoresh because his sadism has no limits, violent and impulsive hates all who follow Allah and his prophet.
+";
+"Marastoco" = "<title>Marastoco</title>\nA window through which the Ayar brothers came.
+";
+"Pacaritambo" = "<title>Pacaritambo</title>\nLocated 12 leagues northeast of Cusco. It's the place where the second portal called <_link><_link>Tamputoco|Tamputoco</_link>|<_link>Tamputoco|Tamputoco</_link></_link> is situated.
+";
+"Pampamisayoq" = "<title>Pampamisayoq</title> <italic>(pam pa mee sa JOCK)</italic> \nAn Andean priest and seer who can talk to <_link>Apu|Apu</_link>s.
+";
+"Portal of the Sun" = "<title>Portal of the Sun</title>\n one of the portals that connect the <_link>Hananpacha|Hananpacha</_link> with the <_link>Kaypacha|Kaypacha</_link>. It's located in a concealed place near mystical <_link>Lake Titicaca|Lake Titicaca</_link> and it was through this portal that <_link>Huallullo carhuinchu|Huallullo carhuinchu</_link> escaped and killed mighty gatekeeper <_link>Pukamaru|Pukamaru</_link>. Likewise, <_link>Inti|Inti</_link> passed through this gateway with the aim of stopping his brother.
+";
+"Pukamaru" = "<title>Pukamaru</title> <italic>(poo ka MA roo)</italic> \nThe gatekeeper.
+";
+"Pururauca" = "<title>Pururauca</title> <italic>(poo roo RA oo ka)</italic> \nA state of the Incas in which it is believed that they are able to master fear.
+";
+"Pututero" = "<title>Pututero</title> <italic>(poo too TEH raw)</italic> \nThe one in charge of blowing a wind instrument for a certain purpose.
+";
+"Qanla" = "<title>Qanla</title> <italic>(KAHN lah)</italic> \nThe demon.
+";
+"Qhawa" = "<title>Qhawa</title> <italic>(KAH wa)</italic> \nA chavin warrior who is chased by her own people because she stole the precious column of the irritated god. Her beauty can be matched only to her impressive might of which she makes use to handle the heavy and indestructible column.
+";
+"Sacharrunas" = "<title>Sacharrunas</title> <italic>(sa cha ROO nass)</italic> \nMystical beings who live on the mountains.
+";
+"Taita" = "<title>Taita</title>\nLord.
+";
+"Tambochacay" = "<title>Tambochacay</title> <italic>(TAM baw-cha KY)</italic> \n\"Tambo\", as he's friendly addressed by his master <_link>Layhka Limppu|Layhka Limppu</_link>, is a very talented youngster who was found by Layhka when he was a child in a town south of <_link>PacariTambo|PacariTambo</_link>. Layhka decided to take him in as his apprentice and transmit everything he knows to him.
+";
+"Tamputoco" = "<title>Tamputoco</title>\nA portal with three sacred windows through which the legendary Ayar brothers came out to fulfill their destiny.
+";
+"Tatay" = "<title>Tatay</title> <italic>(tah TIE)</italic> \nLord.
+";
+"Temple of Wiracocha" = "<title>Temple of Wiracocha</title>\nA powerful fortress that contains a wealth of divine objects such as the coveted Stone Puma that grants wisdom to its protector.
+";
+"Sipan" = "<title>The lord of sipan</title>\nThe late ruler of the land of the Mochica culture. <_link>Inti|Inti</_link> allowed him to come back as an entity accompanied by loyal pets that help him solve certain problems. Additionally, he has got great goldsmith ability and is believed to have created the Wollqas of power.
+";
+"Tsunki" = "<title>Tsunki</title>\nThe lord of the rivers and the guardian of Guanacaure spring. He is also in charge of keeping the golden staffs. He can be in the water only because his feet are shaped like fish and in order to move around, he converts into many golden croakers that can swim even in deserts.
+";
+"Tullumachu" = "<title>Tullumachu</title> <italic>(too joo MAH choo)</italic> \nAnother name for <_link>Chullpas|Chullpas</_link>.
+";
+"Tunche" = "<title>Tunche</title> <italic>(TOON cheh)</italic> \nA demon that wanders around the exotic jungle and claims the life of anyone who goes deep into the thick vegetation. He approaches his victims slowly without emitting any sound. However, some people account for a certain whistling peep from a black chick which lures <_link>Tunche|Tunche</_link> to his victim.
+";
+"Ukjupacha" = "<title>Ukjupacha</title> <italic>(ook hoo PAH cha)</italic> \nThe lower world.
+";
+"Uququs" = "<title>Uququs</title> <italic>(oo KOO koos)</italic> \nThe race of the toads.
+";
+"Wiracocha" = "<title>Wiracocha</title> <italic>(wee rah KAW cha)</italic> \nThe father of the gods.
+";
+"Yanapuma" = "<title>Yanapuma</title> <italic>(jah na POO ma)</italic> \nA black puma that can take a human form and that is also believed to have extremely uncontrollable power. He was a victim of one of <_link>Qanla|Qanla's</_link> deceits who trapped him in labyrinth Qenko from which he can't escape due to a powerful curse.
+";
+
+"exit" = "Exit";
+"buy" = "Buy";

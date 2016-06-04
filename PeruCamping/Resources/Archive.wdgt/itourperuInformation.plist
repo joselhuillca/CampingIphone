@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>texts</key>
+	<dict>
+		<key>load_comic</key>
+		<dict>
+			<key>en</key>
+			<string> </string>
+			<key>es</key>
+			<string>  </string>
+		</dict>
+		<key>textT_badr_postersGnrComic</key>
+		<dict>
+			<key>en</key>
+			<string>Genre Comic</string>
+			<key>es</key>
+			<string>Genre Comic</string>
+		</dict>
+		<key>textT_badr_postersDatePages</key>
+		<dict>
+			<key>en</key>
+			<string>2016 | 24 pages</string>
+			<key>es</key>
+			<string>2016 | 24 pages</string>
+		</dict>
+		<key>back_title_wallpaper</key>
+		<dict>
+			<key>en</key>
+			<string>Wallpaper</string>
+			<key>es</key>
+			<string>Damdam</string>
+		</dict>
+		<key>textT_badr_personajesName_ Abu_Sufyan</key>
+		<dict>
+			<key>en</key>
+			<string>Abu Sufyan</string>
+			<key>es</key>
+			<string>Abu Sufyan</string>
+		</dict>
+		<key>textT_badr_personajesName_ Umayah</key>
+		<dict>
+			<key>en</key>
+			<string>Umayah Ibn</string>
+			<key>es</key>
+			<string>Umayah Ibn</string>
+		</dict>
+		<key>textT_badr_personajesName_ Al_Aswad</key>
+		<dict>
+			<key>en</key>
+			<string>Al Aswad</string>
+			<key>es</key>
+			<string>Al Aswad</string>
+		</dict>
+		<key>textT_badr_personajesName_ Migdad</key>
+		<dict>
+			<key>en</key>
+			<string>Migdad</string>
+			<key>es</key>
+			<string>Migdad</string>
+		</dict>
+		<key>textT_badr_personajesName_ Sad_bin</key>
+		<dict>
+			<key>en</key>
+			<string>Sa&apos;d bin</string>
+			<key>es</key>
+			<string>Sa&apos;d bin</string>
+		</dict>
+		<key>textT_badr_personajesName_ Said_bin</key>
+		<dict>
+			<key>en</key>
+			<string>Said bin</string>
+			<key>es</key>
+			<string>Said bin</string>
+		</dict>
+		<key>textT_badr_personajesName_ Talhah</key>
+		<dict>
+			<key>en</key>
+			<string>Tal hah</string>
+			<key>es</key>
+			<string>Tal hah</string>
+		</dict>
+		<key>textT_badr_personajesName_ ibn_Mas</key>
+		<dict>
+			<key>en</key>
+			<string>Ibn Mas</string>
+			<key>es</key>
+			<string>Ibn Mas</string>
+		</dict>
+		<key>textT_badr_personajesName_Damdam</key>
+		<dict>
+			<key>en</key>
+			<string>Damdam</string>
+			<key>es</key>
+			<string>Damdam</string>
+		</dict>
+		<key>textT_badr_personajesName_Bilal</key>
+		<dict>
+			<key>en</key>
+			<string>Bilal</string>
+			<key>es</key>
+			<string>Bilal</string>
+		</dict>
+		<key>textT_badr_personajesName_Abu_Bakr</key>
+		<dict>
+			<key>en</key>
+			<string>Abu Bakr</string>
+			<key>es</key>
+			<string>Abu Bakr</string>
+		</dict>
+		<key>textT_badr_personajesRatings</key>
+		<dict>
+			<key>en</key>
+			<string>(116 Ratings)</string>
+			<key>es</key>
+			<string>(116 Ratings)</string>
+		</dict>
+		<key>textT_badr_postersRatings</key>
+		<dict>
+			<key>en</key>
+			<string>(116 Ratings)</string>
+			<key>es</key>
+			<string>(116 Ratings)</string>
+		</dict>
+		<key>badr_personajes_released</key>
+		<dict>
+			<key>en</key>
+			<string>Released: ene 4, 2012 
+Pages:  31
+Creators: Andy Kubert
+ Rating: 12+</string>
+			<key>es</key>
+			<string>Released: ene 4, 2012 
+Pages:  31
+Creators: Andy Kubert
+ Rating: 12+</string>
+		</dict>
+		<key>textT_badr_personajesBando_muslim</key>
+		<dict>
+			<key>en</key>
+			<string>Muslim</string>
+			<key>es</key>
+			<string>Muslim</string>
+		</dict>
+		<key>textT_badr_personajesBando_qoresh</key>
+		<dict>
+			<key>en</key>
+			<string>Qoresh</string>
+			<key>es</key>
+			<string>Qoresh</string>
+		</dict>
+		<key>textT_badr_personajesName_Abu_Jahl</key>
+		<dict>
+			<key>en</key>
+			<string>Abu Jahl</string>
+			<key>es</key>
+			<string>Abu Jahl</string>
+		</dict>
+		<key>textPoster_1</key>
+		<dict>
+			<key>en</key>
+			<string>The battle of Badr</string>
+			<key>es</key>
+			<string>The battle of Badr</string>
+		</dict>
+		<key>textPoster_2</key>
+		<dict>
+			<key>en</key>
+			<string>Released: ene 4, 2012</string>
+			<key>es</key>
+			<string>Released: ene 4, 2012</string>
+		</dict>
+		<key>textPoster_3</key>
+		<dict>
+			<key>en</key>
+			<string>Pages:  31</string>
+			<key>es</key>
+			<string>Pages:  31</string>
+		</dict>
+		<key>textPoster_4</key>
+		<dict>
+			<key>en</key>
+			<string>Creators: NWES</string>
+			<key>es</key>
+			<string>Creators: NWES</string>
+		</dict>
+		<key>textReadingProgress</key>
+		<dict>
+			<key>en</key>
+			<string>reading progress</string>
+			<key>es</key>
+			<string>reading progress</string>
+		</dict>
+		<key>badrTitulo_nameUser</key>
+		<dict>
+			<key>en</key>
+			<string>Stevens</string>
+			<key>es</key>
+			<string>Stevens</string>
+		</dict>
+		<key>back_title</key>
+		<dict>
+			<key>en</key>
+			<string>Stevens</string>
+			<key>es</key>
+			<string>Stevens</string>
+		</dict>
+		<key>textT_badr_posterTapRate</key>
+		<dict>
+			<key>en</key>
+			<string>Tap to Rate</string>
+			<key>es</key>
+			<string>Tap to Rate</string>
+		</dict>
+		<key>textT_badr_posterRater</key>
+		<dict>
+			<key>en</key>
+			<string>Rate this collection:</string>
+			<key>es</key>
+			<string>Rate this collection:</string>
+		</dict>
+		<key>badr_credits</key>
+		<dict>
+			<key>en</key>
+			<string>Credits</string>
+			<key>es</key>
+			<string>Credits</string>
+		</dict>
+		<key>button_open</key>
+		<dict>
+			<key>en</key>
+			<string> </string>
+			<key>es</key>
+			<string> </string>
+		</dict>
+		<key>badr_summary</key>
+		<dict>
+			<key>en</key>
+			<string>Summary</string>
+			<key>es</key>
+			<string>Summary</string>
+		</dict>
+		<key>characteresText</key>
+		<dict>
+			<key>en</key>
+			<string>The characters</string>
+			<key>es</key>
+			<string>The characters</string>
+		</dict>
+		<key>textWallpapersT</key>
+		<dict>
+			<key>en</key>
+			<string>Wallpapers</string>
+			<key>es</key>
+			<string>Wallpapers</string>
+		</dict>
+		<key>textTCharacters</key>
+		<dict>
+			<key>en</key>
+			<string>Characters</string>
+			<key>es</key>
+			<string>Characters</string>
+		</dict>
+		<key>textSynopsis</key>
+		<dict>
+			<key>en</key>
+			<string>Synopsis</string>
+			<key>es</key>
+			<string>Synopsis</string>
+		</dict>
+		<key>textCredits</key>
+		<dict>
+			<key>en</key>
+			<string>Credits</string>
+			<key>es</key>
+			<string>Credits</string>
+		</dict>
+		<key>textTheStory</key>
+		<dict>
+			<key>en</key>
+			<string>The story</string>
+			<key>es</key>
+			<string>The story</string>
+		</dict>
+		<key>wallpapersText</key>
+		<dict>
+			<key>en</key>
+			<string>Wallpapers</string>
+			<key>es</key>
+			<string>Wallpapers</string>
+		</dict>
+		<key>ComicPagesText</key>
+		<dict>
+			<key>en</key>
+			<string>Comic Pages</string>
+			<key>es</key>
+			<string>Comic Pages</string>
+		</dict>
+		<key>test_</key>
+		<dict>
+			<key>en</key>
+			<string>test_</string>
+			<key>es</key>
+			<string>test_</string>
+		</dict>
+		<key>button_poster1</key>
+		<dict>
+			<key>en</key>
+			<string>button_poster1</string>
+			<key>es</key>
+			<string>button_poster1</string>
+		</dict>
+		<key>edutic_termUsechek</key>
+		<dict>
+			<key>en</key>
+			<string>TO REGISTER, ACCEPT THE &lt;colored&gt;TERMS OF USE&lt;/colored&gt;</string>
+			<key>es</key>
+			<string>Ver   &lt;subsubtitle&gt;Volumen III&lt;/subsubtitle&gt;</string>
+		</dict>
+		<key>edutic_connect</key>
+		<dict>
+			<key>en</key>
+			<string>&lt;colored&gt;Connect&lt;/colored&gt; whit your classmates
+
+&lt;colored&gt;Get Help&lt;/colored&gt; on homework
+
+&lt;colored&gt;Get better graces&lt;/colored&gt; for real
+
+</string>
+			<key>es</key>
+			<string>Ver   &lt;subsubtitle&gt;Volumen III&lt;/subsubtitle&gt;</string>
+		</dict>
+		<key>edutic_barraTavance</key>
+		<dict>
+			<key>en</key>
+			<string>Avance de Tarea</string>
+			<key>es</key>
+			<string>Ver   &lt;subsubtitle&gt;Volumen III&lt;/subsubtitle&gt;</string>
+		</dict>
+		<key>edutic_barraTname</key>
+		<dict>
+			<key>en</key>
+			<string>Stevens</string>
+			<key>es</key>
+			<string>Ver   &lt;subsubtitle&gt;Volumen III&lt;/subsubtitle&gt;</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

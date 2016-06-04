@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>ID</key>
+		<string>navigability</string>
+		<key>Release date</key>
+		<date>2011-01-05T15:03:07Z</date>
+		<key>navigability</key>
+		<dict>
+			<key>test_button</key>
+			<dict>
+				<key>back</key>
+				<string>mainMenu</string>
+			</dict>
+			<key>mainMenu</key>
+			<dict>
+				<key>button_read</key>
+				<dict>
+					<key>link</key>
+					<string>test_button</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</array>
+</plist>
