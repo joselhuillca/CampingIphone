@@ -13,7 +13,13 @@ namespace PeruCamping
 			
 			base.generateFromDictionary (dic, naviDic, manager); 
 
-			ImageView baseView = new ImageView ();
+			var isScaled = dic.ValueForKey(new NSString("isScaled"));
+			if (isScaled == null)
+			{
+				isScaled = new NSString("false");
+			}
+
+			ImageView baseView = new ImageView((NSString)isScaled);
 			baseView.StyleName = (dic.ValueForKey(new NSString("style")) as NSString).ToString();
 			this.fillStyleAttributesForView(baseView); 
 

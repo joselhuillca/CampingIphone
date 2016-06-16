@@ -17,6 +17,8 @@ namespace PeruCamping
 		private NSString lastViewName;   
 		public UIBaseView bView;
 
+		public ViewController vc;
+
 		public AppModel model;
 		public UIView view;
 		public AudioController audioController;
@@ -24,6 +26,9 @@ namespace PeruCamping
 
 		public AppManagerController ()
 		{
+			AppDelegate delegate_ = (AppDelegate)((UIApplication.SharedApplication).Delegate);
+			vc = (ViewController)(delegate_.Window.RootViewController);
+
 			visualObjectsDictionary = new NSMutableDictionary ();
 			//[self performSelectorInBackground:@selector(initializeSound) withObject:nil];
 

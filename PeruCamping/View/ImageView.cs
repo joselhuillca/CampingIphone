@@ -2,11 +2,19 @@
 using CoreGraphics;
 using UIKit;
 using Foundation;
+using System.Drawing;
 
 namespace PeruCamping
 {
 	public class ImageView : UIBaseView
 	{
+		public NSString isScaled; 
+
+		public ImageView(NSString isScaled_)
+		{
+			this.isScaled = isScaled_;
+		}
+
 		public ImageView ()
 		{
 		}
@@ -14,6 +22,22 @@ namespace PeruCamping
 		[Export ("reDraw")]
 		public override void reDraw(){
 			base.reDraw();
+			NSArray collection = this.getImageBackgroundColorAttribute() as NSArray;
+			if (collection != null && isScaled.Equals(new NSString("true")))
+			{
+				try
+				{
+
+					UIImage img = UtilManagment.imageFromDocumentDirectory(collection.GetItem<NSString>((nuint)this.attributePositionToRedraw()));
+					img = Constantes.ScaleToSize(img, (int)this.Bounds.Width, (int)this.Bounds.Height);//HUILLCA -- escalar la imagen
+					this.BackgroundColor = UIColor.FromPatternImage(img);
+				}
+				catch (Exception e)
+				{
+					//Error al cargar la imagen
+				}
+
+			}
 		}
 
 		public void stopAnimations(){//Para el Grid view
@@ -55,6 +79,8 @@ namespace PeruCamping
 			UIView.CommitAnimations();
 			this.Transform = CGAffineTransform.MakeIdentity ();
 		}
+
+
 	}
 }
 

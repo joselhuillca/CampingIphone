@@ -1,8 +1,23 @@
 ﻿<Properties StartupItem="PeruCamping/PeruCamping.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.2" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PeruCamping/View/MenuScrollView.cs">
+    <Files>
+      <File FileName="PeruCamping/View/LabelView.cs" Line="26" Column="3" />
+      <File FileName="PeruCamping/View/ContentListView.cs" Line="75" Column="44" />
+      <File FileName="PeruCamping/Controllers/Generator/ContentListViewGenerator.cs" Line="15" Column="17" />
+      <File FileName="PeruCamping/View/Twitter_sampled/TwitterView.cs" Line="17" Column="3" />
+      <File FileName="PeruCamping/Controllers/Generator/LabelViewGenerator.cs" Line="6" Column="34" />
+      <File FileName="PeruCamping/View/Util/UIBaseView.cs" Line="239" Column="21" />
+      <File FileName="PeruCamping/Controllers/AppManagerController.cs" Line="20" Column="10" />
+      <File FileName="PeruCamping/ViewController.cs" Line="9" Column="37" />
+      <File FileName="PeruCamping/AppDelegate.cs" Line="22" Column="4" />
+      <File FileName="PeruCamping/View/CampamentoIndex.cs" Line="4" Column="30" />
+      <File FileName="PeruCamping/View/MenuScrollView.cs" Line="113" Column="47" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PeruCamping PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3BCFA3CD-B34D-4C54-9A8D-D722B8D22DC4" />
 </Properties>

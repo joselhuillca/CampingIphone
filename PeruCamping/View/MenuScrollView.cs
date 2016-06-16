@@ -3,18 +3,40 @@ using Foundation;
 using UIKit;
 using ObjCRuntime;
 using CoreGraphics;
+using System.Drawing;
+using System.Collections.Generic;
 
 namespace PeruCamping
 {
+	public class ScrollDelegate : UIScrollViewDelegate
+	{
+		MenuScrollView menuScroll;
+		public ScrollDelegate(MenuScrollView refs)
+		{
+
+			this.menuScroll = refs;
+
+		}
+
+		public override void DecelerationEnded(UIScrollView scrollView)
+		{
+			this.menuScroll.scrollViewDidEndDecelerating(scrollView);
+		}
+
+		public override void DecelerationStarted(UIScrollView scrollView)
+		{
+			this.menuScroll.ScrollViewWillBeginDragging(scrollView);
+		}
+	}
 	//swipe
-	public partial class MenuScrollView: UIBaseView,AnimationProtocol
+	public class MenuScrollView : UIBaseView, AnimationProtocol
 	{
 		// scroll that contains a UIView for each title 
 		private UIScrollView scroll;
 		//scroll that contains all title label 
 		private UIScrollView titleScroll;
 		// array that contains a UILabel of each title. 
-		private NSMutableArray titleArray;    
+		private NSMutableArray titleArray;
 		// represent a page in the scroll and the position of the title en the titleArray 
 
 		private NSMutableArray subviews;
@@ -27,25 +49,31 @@ namespace PeruCamping
 
 		public NSMutableArray subviewCache;
 
-		public nuint actualPage; 
-		public string name;
+		public nuint actualPage;
+		public nuint actualPage_static;
 
-		public MenuScrollView ()
+		public MenuScrollView()
 		{
 			scroll = new UIScrollView();
 			scroll.PagingEnabled = true;
-			//scroll.Delegate = this;
+			var del = new ScrollDelegate(this);
+			this.UserInteractionEnabled = true;
+			this.MultipleTouchEnabled = true;
+
+			scroll.Delegate = del;
+
 			scroll.ShowsHorizontalScrollIndicator = false;
 			scroll.ShowsVerticalScrollIndicator = false;
 			this.AddSubview(scroll);
 
-			titleScroll = new UIScrollView ();
+			titleScroll = new UIScrollView();
 			titleScroll.ShowsHorizontalScrollIndicator = false;
 			titleScroll.ShowsVerticalScrollIndicator = false;
-			this.AddSubview (titleScroll);
+			this.AddSubview(titleScroll);
 
 			titleArray = new NSMutableArray();
-			actualPage = 0;  
+			actualPage = 0;
+			actualPage_static = 0;
 
 			subviews = new NSMutableArray();
 			subviewsFrames = new NSMutableArray();
@@ -55,117 +83,134 @@ namespace PeruCamping
 			firstTimeScroll = true;
 
 			subviewCache = new NSMutableArray();
-
-		}
-		NSString NSStringFromCGRect (CGRect f) {
-			return new NSString ( f.ToString () );
 		}
 
-		public void addSubview(NSDictionary view,NSString title)
+		NSString NSStringFromCGRect(CGRect f)
+		{
+			string rect_ = "{" + (f.X).ToString() + "," + (f.Y).ToString() + "},{" + (f.Width).ToString() + "," + (f.Height).ToString() + "}";
+			return new NSString(rect_);
+		}
+
+
+		public void addSubview(NSDictionary view, NSString title, CGRect posicion)
 		{
 			UILabel titleLabel = new UILabel();
 			titleLabel.BackgroundColor = UIColor.Clear;
 			titleLabel.Text = title;
 			titleLabel.TextColor = UIColor.Gray;
 
-			titleLabel.UserInteractionEnabled = true;  	
+			titleLabel.UserInteractionEnabled = true;
 
-			UITapGestureRecognizer tapGesture =  new UITapGestureRecognizer(  (t) => {
+			UITapGestureRecognizer tapGesture = new UITapGestureRecognizer((t) =>
+			{
 				handleTapGesture(t);
-			}); 
-			titleLabel.AddGestureRecognizer(tapGesture);       
-			//titleLabel.Delegate
-			titleScroll.AddSubview( titleLabel ) ;    
-			titleArray.Add(titleLabel );
+			});
+			//titleLabel.AddGestureRecognizer(tapGesture);
+
+			//********IMAGE*********************
+
+			UIImageView icons = new UIImageView(posicion);
+			icons.Image = UIImage.FromFile("Archive.wdgt"+title.ToString());
+			icons.AddGestureRecognizer(tapGesture);
+			titleScroll.AddSubview(icons);
+			//********Fin IMAGE*********************
+
+			//titleScroll.AddSubview(titleLabel);
+			titleArray.Add(titleLabel);
 
 
-			NSObject[] frames_array = NSMutableArray.FromArray<NSObject> (this.getFrameAttribute ()); 
-			NSMutableArray frames = new  NSMutableArray (  );
-			frames.AddObjects (frames_array); 
-			for (nuint k =0 ; k<frames.Count ; k++) {
-				CGRect f =   CGRectFromString(frames.GetItem<NSString>(k));
-				f.X = f.Size.Width * (titleArray.Count -1);
+			NSObject[] frames_array = NSMutableArray.FromArray<NSObject>(this.getFrameAttribute());
+			NSMutableArray frames = new NSMutableArray();
+			frames.AddObjects(frames_array);
+			for (nuint k = 0; k < frames.Count; k++)
+			{
+				CGRect f = CGRectFromString(frames.GetItem<NSString>(k));
+				f.X = f.Size.Width * (titleArray.Count - 1);
 				f.Y = 0;
-				frames.ReplaceObject( (nint)k,  NSStringFromCGRect(f) );
-			}    
-			subviewsFrames.Add ( frames );
-			subviews.Add(view );
+				frames.ReplaceObject((nint)k, NSStringFromCGRect(f));
+			}
+			subviewsFrames.Add(frames);
+			subviews.Add(view);
 
-			this.createViewAtIndex(subviews.Count-1);
+			this.createViewAtIndex(subviews.Count - 1);
 		}
 
 
 
-		public  void  createViewAtIndex(nuint  k ){
+		public void createViewAtIndex(nuint k)
+		{
 
-			NSDictionary dic =  this.subviews.GetItem<NSDictionary> ( k  );
+			NSDictionary dic = this.subviews.GetItem<NSDictionary>(k);
 
-			String typeClass = String.Format ("PeruCamping.{0}Generator", dic.ValueForKey (new NSString ("dic")).ValueForKey (new NSString ("class")));
-			Console.WriteLine (typeClass);
-			Type t = Type.GetType (typeClass);
-			AbstractViewGenerator classGenerator = Activator.CreateInstance (t) as AbstractViewGenerator;
+			String typeClass = String.Format("PeruCamping.{0}Generator", dic.ValueForKey(new NSString("dic")).ValueForKey(new NSString("class")));
+			//Console.WriteLine (typeClass);
+			Type t = Type.GetType(typeClass);
+			AbstractViewGenerator classGenerator = Activator.CreateInstance(t) as AbstractViewGenerator;
 
-			var dicccc = dic.ValueForKey (new NSString ("dic")) as NSDictionary;
-			var naviDic =  dic.ValueForKey(new NSString ("nav")) as NSDictionary; 
-			UIBaseView actualView = classGenerator.generateFromDictionary(dicccc, naviDic,  this.managerController );
+			var dicccc = dic.ValueForKey(new NSString("dic")) as NSDictionary;
+			var naviDic = dic.ValueForKey(new NSString("nav")) as NSDictionary;
+			UIBaseView actualView = classGenerator.generateFromDictionary(dicccc, naviDic, this.managerController);
 
-			actualView.setFrameAttribute( subviewsFrames.GetItem<NSArray>(k) );
-			actualView.reDraw () ;
+			actualView.setFrameAttribute(subviewsFrames.GetItem<NSArray>(k));
+			actualView.reDraw();
 
-			for (nuint i = 0; i < backgroundView.Count; i++) {
+			for (nuint i = 0; i < backgroundView.Count; i++)
+			{
 				UIView vw = backgroundView.GetItem<UIView>(i);
 				vw.Alpha = 0;
 			}
 			firstTimeScroll = true;
-			scroll.AddSubview(actualView);    
+			scroll.AddSubview(actualView);
 			subviewCache.Add(actualView);
 			actualView = null;
-
-
-
-
 		}
 
 		public void addSubViewScroll(UIBaseView view)
 		{
 			view.Alpha = 0;
 			scroll.AddSubview(view);
-			backgroundView.Add (view);
+			backgroundView.Add(view);
 		}
 
 		//when a MenuScroll is created, this method must called, at the end to refresh the menu selection
 		public void refresh()
 		{
 			//[self scrollViewDidEndDecelerating:scroll];
-			this.scrollViewDidEndDecelerating (scroll);
+			this.scrollViewDidEndDecelerating(scroll);
 		}
 
-		public void scrollViewDidEndDecelerating(UIScrollView scrollView ) {
-			if (firstTime) {        
+		public void scrollViewDidEndDecelerating(UIScrollView scrollView)
+		{
+			if (firstTime)
+			{
 				firstTime = false;
-			}else{
- 				NSUrl fileURL = NSUrl.FromFilename(NSBundle.MainBundle.PathForResource("sounds/tab_Switch1","wav"));
- 
-				this.managerController.audioController.playAudioWithUrl ( fileURL);
+			}
+			else
+			{
+				NSUrl fileURL = NSUrl.FromFilename(NSBundle.MainBundle.PathForResource("sounds/tab_Switch1", "wav"));
+
+				this.managerController.audioController.playAudioWithUrl(fileURL);
 			}
 
-			UILabel  titleLabel = titleArray.GetItem<UILabel> ( actualPage) ;
-			CGRect rect = CGRectFromString( this.getTitleUnselectedColorAttribute ().GetItem <NSString>(this.attributePositionToRedraw()) ); 
-			titleLabel.TextColor = UtilManagment.getColorFromRect (rect) ;
+			UILabel titleLabel = titleArray.GetItem<UILabel>(actualPage);
+			CGRect rect = CGRectFromString(this.getTitleUnselectedColorAttribute().GetItem<NSString>(this.attributePositionToRedraw()));
+			titleLabel.TextColor = UtilManagment.getColorFromRect(rect);
+			//Image --------------------
 
+			//------------------------------
 			this.stopAnimations();
 
-			actualPage = ( nuint )( scroll.ContentOffset.X/scroll.Frame.Size.Width  );
-			actualPage = actualPage<0||actualPage>=titleArray.Count?0:actualPage;
-			titleLabel = titleArray.GetItem<UILabel> (actualPage );
+			actualPage = (nuint)(scroll.ContentOffset.X / scroll.Frame.Size.Width);
+			actualPage = actualPage < 0 || actualPage >= titleArray.Count ? 0 : actualPage;
+			titleLabel = titleArray.GetItem<UILabel>(actualPage);
 
-			CGRect rectc = CGRectFromString( this.getTitleSelectedColorAttribute ().GetItem <NSString>( this.attributePositionToRedraw () )  ); 
-			titleLabel.TextColor = UtilManagment.getColorFromRect (rectc) ;   
+			CGRect rectc = CGRectFromString(this.getTitleSelectedColorAttribute().GetItem<NSString>(this.attributePositionToRedraw()));
+			titleLabel.TextColor = UtilManagment.getColorFromRect(rectc);
 
-			this.startAnimations(); 
+			this.startAnimations();
 
 
-			this.refreshTitleScrollFromLabelSelected(titleLabel);   
+			this.refreshTitleScrollFromLabelSelected(titleLabel);
 
 		}
 
@@ -173,7 +218,7 @@ namespace PeruCamping
 		//set an array that contains four colors's of the title when it is selected,that depend of the device and orientation.
 		public void setTitleSelectedColorAttribute(NSArray selectedColors)
 		{
-			attributes.SetValueForKey(selectedColors.Copy(),new NSString("selectedColors"));
+			attributes.SetValueForKey(selectedColors.Copy(), new NSString("selectedColors"));
 		}
 
 		//return an array that contains four colors's of the title when it is selected,that depend of the device and orientation. 
@@ -185,7 +230,7 @@ namespace PeruCamping
 		//set an array that contains four colors's of the title when it is not selected,that depend of the device and orientation.
 		public void setTitleUnselectedColorAttribute(NSArray unselectedColors)
 		{
-			attributes.SetValueForKey (unselectedColors.Copy (), new NSString ("unselectedColors"));
+			attributes.SetValueForKey(unselectedColors.Copy(), new NSString("unselectedColors"));
 		}
 
 		//return an array that contains four colors's of the title when it is not selected,that depend of the device and orientation. 
@@ -200,7 +245,7 @@ namespace PeruCamping
 		 */
 		public void setTitleHeightAttribute(NSArray titleHeights)
 		{
-			attributes.SetValueForKey(titleHeights.Copy(),new NSString("titleHeights"));
+			attributes.SetValueForKey(titleHeights.Copy(), new NSString("titleHeights"));
 		}
 
 		public NSArray getTitleHeightAttribute()
@@ -208,14 +253,18 @@ namespace PeruCamping
 			return (NSArray)(attributes.ValueForKey(new NSString("titleHeights")));
 		}
 
-		public void  ScrollViewWillBeginDragging(UIScrollView scrollView){
-			if (firstTimeScroll) {
+		public void ScrollViewWillBeginDragging(UIScrollView scrollView)
+		{
+			if (firstTimeScroll)
+			{
 				//[backgroundView makeObjectsPerformSelector:@selector(setAlpha:) withObject:[NSNumber numberWithDouble:1.0]];
-				for (nuint i = 0; i < backgroundView.Count; i++) {
+				for (nuint i = 0; i < backgroundView.Count; i++)
+				{
 					UIView vw = backgroundView.GetItem<UIView>(i);
 					vw.Alpha = 0;
-				}firstTimeScroll = false;
-			}    
+				}
+				firstTimeScroll = false;
+			}
 		}
 
 		/* ----------------------------------GESTURERECONIGZER */
@@ -223,24 +272,24 @@ namespace PeruCamping
 		//*/
 		public void handleTapGesture(UITapGestureRecognizer gestureRecognizer)
 		{
-			for (nuint i = 0; i < backgroundView.Count; i++) {
+			for (nuint i = 0; i < backgroundView.Count; i++)
+			{
 				UIView vw = backgroundView.GetItem<UIView>(i);
 				vw.Alpha = 1;
 			}
 
-			NSUrl fileURL = NSUrl.FromFilename(NSBundle.MainBundle.PathForResource("sounds/tab_Switch1","wav"));
+			NSUrl fileURL = NSUrl.FromFilename(NSBundle.MainBundle.PathForResource("sounds/tab_Switch1", "wav"));
 			//self.urlAudioFile = fileURL;
 			this.managerController.audioController.playAudioWithUrl(fileURL);
-			scroll.ScrollRectToVisible(new CGRect(scroll.Frame.Size.Width*(titleArray.IndexOf(gestureRecognizer.View)),scroll.Frame.Location.Y,scroll.Frame.Size.Width,scroll.Frame.Size.Height),true);
+			scroll.ScrollRectToVisible(new CGRect(scroll.Frame.Size.Width * (titleArray.IndexOf(gestureRecognizer.View)), scroll.Frame.Location.Y, scroll.Frame.Size.Width, scroll.Frame.Size.Height), true);
 
-			UILabel titleLabel = titleArray.GetItem<UILabel> (actualPage);
+			UILabel titleLabel = titleArray.GetItem<UILabel>(actualPage);
 			NSString textColAttr_ = this.getTitleUnselectedColorAttribute().GetItem<NSString>((nuint)(this.attributePositionToRedraw()));
-			titleLabel.TextColor = UtilManagment.getColorFromRect (CGRectFromString(textColAttr_));
+			titleLabel.TextColor = UtilManagment.getColorFromRect(CGRectFromString(textColAttr_));
 
 			this.stopAnimations();
 
-			actualPage = titleArray.IndexOf (gestureRecognizer.View);
-
+			actualPage = titleArray.IndexOf(gestureRecognizer.View);
 
 			this.startAnimations();
 
@@ -248,66 +297,79 @@ namespace PeruCamping
 			NSString textColAttr = this.getTitleSelectedColorAttribute().GetItem<NSString>((nuint)(this.attributePositionToRedraw()));
 			titleLabel.TextColor = UtilManagment.getColorFromRect(CGRectFromString(textColAttr.ToString()));
 
-			this.refreshTitleScrollFromLabelSelected(titleLabel); 
+			this.refreshTitleScrollFromLabelSelected(titleLabel);
 		}
 
 		public void refreshTitleScrollFromLabelSelected(UILabel selectedLabel)
 		{
-			
-			if ( selectedLabel.Frame.Location.X > titleScroll.Frame.Size.Width/2 ) {
-				titleScroll.ScrollRectToVisible(new CGRect(selectedLabel.Frame.Location.X + titleScroll.Frame.Size.Width/2-selectedLabel.Frame.Size.Width/2, 0,selectedLabel.Frame.Size.Width,selectedLabel.Frame.Size.Height),true);
-			}    
 
-			if (selectedLabel.Frame.Location.X < titleScroll.ContentSize.Width - titleScroll.Frame.Size.Width/2) {
-				titleScroll.ScrollRectToVisible(new CGRect(selectedLabel.Frame.Location.X - titleScroll.Frame.Size.Width/2+selectedLabel.Frame.Size.Width/2, 0,selectedLabel.Frame.Size.Width,selectedLabel.Frame.Size.Height),true);
+			/*if (selectedLabel.Frame.Location.X > titleScroll.Frame.Size.Width / 2)
+			{
+				titleScroll.ScrollRectToVisible(new CGRect(selectedLabel.Frame.Location.X + titleScroll.Frame.Size.Width / 2 - selectedLabel.Frame.Size.Width / 2, 0, selectedLabel.Frame.Size.Width, selectedLabel.Frame.Size.Height), true);
 			}
+
+			if (selectedLabel.Frame.Location.X < titleScroll.ContentSize.Width - titleScroll.Frame.Size.Width / 2)
+			{
+				titleScroll.ScrollRectToVisible(new CGRect(selectedLabel.Frame.Location.X - titleScroll.Frame.Size.Width / 2 + selectedLabel.Frame.Size.Width / 2, 0, selectedLabel.Frame.Size.Width, selectedLabel.Frame.Size.Height), true);
+			}*/
 		}
 
 		public void startAnimations()
 		{
 			var bv = (UIView)(subviewCache.GetItem<NSObject>((nuint)actualPage));
 			var bv_ = bv as AnimationProtocol;
-			if (bv_!=null) {
-				bv_.startAnimations ();
-			} 
-			foreach(NSObject sv in bv.Subviews)
+			if (bv_ != null)
+			{
+				bv_.startAnimations();
+			}
+			foreach (NSObject sv in bv.Subviews)
 			{
 				var sv_ = sv as AnimationProtocol;
-				if (sv_ != null) {
-					sv_.startAnimations ();
+				if (sv_ != null)
+				{
+					sv_.startAnimations();
 				}
 			}
 		}
 
-		public void stopAnimations(){
-			for(nuint i = 0; i< subviewCache.Count;i++) {
+		public void stopAnimations()
+		{
+			for (nuint i = 0; i < subviewCache.Count; i++)
+			{
 				UIView bv = (UIView)(subviewCache.GetItem<NSObject>(i));
 				var bv_ = bv as AnimationProtocol;
-				if(bv_!=null){
-					bv_.stopAnimations ();
+				if (bv_ != null)
+				{
+					bv_.stopAnimations();
 				}
-				foreach (NSObject sv in bv.Subviews) {
+				foreach (NSObject sv in bv.Subviews)
+				{
 					var sv_ = sv as AnimationProtocol;
-					if (sv_ != null) {
-						sv_.stopAnimations ();
+					if (sv_ != null)
+					{
+						sv_.stopAnimations();
 					}
 				}
 			}
 		}
 
-		public override void  inAnimation(){
-			
-			base.inAnimation();    
+		public override void inAnimation()
+		{
+
+			base.inAnimation();
 			//[[subviewCache objectAtIndex:actualPage] inAnimation];
 			subviewCache.GetItem<UIBaseView>(actualPage).inAnimation();
 		}
 
-		public override void outAnimation(){
-			base.outAnimation ();
+		public override void outAnimation()
+		{
+			base.outAnimation();
 			//[[subviewCache objectAtIndex:actualPage] outAnimation];
 			this.stopAnimations();
-			if (scroll.Subviews.Length > 0) {
-				foreach (NSObject view in scroll.Subviews) {
+			if (scroll.Subviews.Length > 0)
+			{
+				foreach (NSObject view in scroll.Subviews)
+				{
 					/*if ([view respondsToSelector:@selector(stopMediaGrid)]) {
 						[view performSelector:@selector(stopMediaGrid)];                               
 					}
@@ -322,103 +384,151 @@ namespace PeruCamping
 
 		}
 
-		public override void prepareRemove(){
-			
+		public override void prepareRemove()
+		{
+
 			//[super prepareRemove];
 			base.prepareRemove();
 			scroll = null;
-			titleArray.RemoveAllObjects ();
+			titleArray.RemoveAllObjects();
 			titleArray = null;
 			titleScroll = null;
-			subviews.RemoveAllObjects ();
-			subviewsFrames.RemoveAllObjects ();
-			backgroundView.RemoveAllObjects ();
-			name = null;
-			
+			subviews.RemoveAllObjects();
+			subviewsFrames.RemoveAllObjects();
+			backgroundView.RemoveAllObjects();
 		}
 
-		[Export("reDraw")]
-		public override void reDraw(){  
+		//[Export("reDraw")]
+		public override void reDraw()
+		{
 
-			base.reDraw(); 
+			base.reDraw();
 			scroll.Frame = this.Bounds;
 
-			scroll.ContentSize = new CGSize(scroll.Frame.Size.Width*titleArray.Count,scroll.Frame.Size.Height);
-			scroll.ScrollRectToVisible(new CGRect(scroll.Frame.Size.Width*actualPage,scroll.Frame.Location.Y,scroll.Frame.Size.Width,scroll.Frame.Size.Height),false);
+			//HUILLCA  ----------------------------------
+			UILabel titleLabel = titleArray.GetItem<UILabel>(actualPage);
+			NSString textColAttr_ = this.getTitleUnselectedColorAttribute().GetItem<NSString>((nuint)(this.attributePositionToRedraw()));
+			titleLabel.TextColor = UtilManagment.getColorFromRect(CGRectFromString(textColAttr_));
+
+			this.stopAnimations();
+
+			actualPage = actualPage_static;//HUILLCA
+
+			this.startAnimations();
+
+			titleLabel = titleArray.GetItem<UILabel>((nuint)actualPage);
+			NSString textColAttr = this.getTitleSelectedColorAttribute().GetItem<NSString>((nuint)(this.attributePositionToRedraw()));
+			titleLabel.TextColor = UtilManagment.getColorFromRect(CGRectFromString(textColAttr.ToString()));
+
+			this.refreshTitleScrollFromLabelSelected(titleLabel);
+
+			//----------------------------------------------------------------------
+
+			scroll.ContentSize = new CGSize(scroll.Frame.Size.Width * titleArray.Count, scroll.Frame.Size.Height);
+			scroll.ScrollRectToVisible(new CGRect(scroll.Frame.Size.Width * actualPage, scroll.Frame.Location.Y, scroll.Frame.Size.Width, scroll.Frame.Size.Height), false);
 			UILabel label;
 
- 			
+
 			NSString str = this.getTitleHeightAttribute().GetItem<NSString>(this.attributePositionToRedraw());
 
 			titleScroll.Frame = CGRectFromString(str);
-			nfloat titleSpace = 0; 
+			nfloat titleSpace = 0;
 
 
-			for (nuint k = 0; k<titleArray.Count; k++) {
-				label =  titleArray.GetItem<UILabel> (k);
-				var fontTitle = this.getFontTitleAttribute ().GetItem<NSString> (this.attributePositionToRedraw ());
-				var fontSize =  this.getFontSizeTitleAttribute ().GetItem<NSNumber> (this.attributePositionToRedraw ());
+			for (nuint k = 0; k < titleArray.Count; k++)
+			{
+				label = titleArray.GetItem<UILabel>(k);
+				var fontTitle = this.getFontTitleAttribute().GetItem<NSString>(this.attributePositionToRedraw());
+				var fontSize = this.getFontSizeTitleAttribute().GetItem<NSNumber>(this.attributePositionToRedraw());
 
-				float asFloat = (float) fontSize;
+				float asFloat = (float)fontSize;
 
-				label.Font =  UIFont.FromName(fontTitle,  (nfloat)asFloat );
+				label.Font = UIFont.FromName(fontTitle, (nfloat)asFloat);
 
 				label.SizeToFit();
-				label.Frame = new CGRect(titleSpace, 0, label.Frame.Size.Width, label.Frame.Size.Height);        
-				titleSpace += label.Frame.Size.Width + titleScroll.Frame.Size.Height;        
+				label.Frame = new CGRect(titleSpace, 0, label.Frame.Size.Width, 73/*label.Frame.Size.Height*/);
+				titleSpace += label.Frame.Size.Width + titleScroll.Frame.Size.Height;
 			}
 
-			label = titleArray.GetItem<UILabel> ( titleArray.Count - 1);
-			titleScroll.ContentSize = new CGSize(titleSpace - titleScroll.Frame.Size.Height, label.Frame.Size.Height);
-			titleScroll.Frame = new CGRect(titleScroll.Frame.X, titleScroll.Frame.Y, titleScroll.Frame.Size.Width, label.Frame.Size.Height);
+
+			for (nuint i = 0; i < this.subviewCache.Count; i++)
+			{
+
+				var subview = this.subviewCache.GetItem<UIBaseView>(i);
+
+				if (UtilManagment.orientation() == 0)
+				{
+					subview.Frame = new CGRect(i * scroll.Frame.Width, subview.Frame.Y, scroll.Frame.Width, scroll.Frame.Height);
+				}
+				else
+				{
+					subview.Frame = new CGRect(i * scroll.Frame.Width, subview.Frame.Y, scroll.Frame.Width, scroll.Frame.Height);
+				}
+				//subview.Frame = 
+			}
+
+			label = titleArray.GetItem<UILabel>(titleArray.Count - 1);
+			titleScroll.ContentSize = new CGSize(titleSpace - titleScroll.Frame.Size.Height, 73/*label.Frame.Size.Height*/);
+			titleScroll.Frame = new CGRect(titleScroll.Frame.X, titleScroll.Frame.Y, titleScroll.Frame.Size.Width, 73/*label.Frame.Size.Height*/);
 			label = null;
-		 
- 			if (firstTime) {
-				this.refresh ()  ;
+			if (firstTime)
+			{
+				this.refresh();
 				//firstTime = NO;
-				for (nuint  i = 0; i <   backgroundView.Count; i++) {
-				
+				for (nuint i = 0; i < backgroundView.Count; i++)
+				{
+
 					UIView vw = backgroundView.GetItem<UIView>(i);
 					vw.Alpha = 0;
 				}
 			}
 		}
 
-		[Export("reDrawSubView")]
-		public override void reDrawSubView(){
+		//[Export("reDrawSubView")]
+		public override void reDrawSubView()
+		{
 			this.stopAnimations();
-			foreach (NSObject view in scroll.Subviews) {        
-				if (view.RespondsToSelector(new Selector("reDraw"))) {
+			foreach (Object view in scroll.Subviews)
+			{
+				if (((UIView)view).RespondsToSelector(new Selector("reDraw")))
+				{
 					((UIBaseView)(view)).reDraw();
-					////NSLog(@"frame: %@",NSStringFromCGRect([(UIView *)view frame]));
-				}              
-			}  
+				}
+			}
 		}
 
-		public void appearAllViews(){
-			foreach (UIView vw in scroll.Subviews) {
+		public void appearAllViews()
+		{
+			foreach (UIView vw in scroll.Subviews)
+			{
 				vw.Alpha = 1.0f;
 			}
 		}
 
-		public void reDrawView(NSObject bv){
-			/*if (bv.RespondsToSelector(new Selector("SetAlpha:"))) {
-				((UIView)(bv)).SetAlpha(0.f);
+		public void reDrawView(NSObject bv)
+		{
+			if (bv.RespondsToSelector(new Selector("SetAlpha:")))
+			{
+				((UIBaseView)(bv)).Alpha = 0.0f;
 			}
-			if (bv.RespondsToSelector(new Selector("reDraw"))) {        
-				bv.reDraw();
-			} */
+			if (bv.RespondsToSelector(new Selector("reDraw")))
+			{
+				((UIBaseView)bv).reDraw();
+			}
 
-			/*UIView.beginAnimations (null, null);
-			[UIView setAnimationDuration:1.];
-			[UIView setAnimationDelay:1.];
-			[UIView setAnimationCurve:UIViewAnimationCurveEaseOut];     
-			(UIView)bv.SetAlpha(1.0f); 
-			UIView.commitAnimations(); */
+			UIView.BeginAnimations(null, new IntPtr());
+			UIView.SetAnimationDuration(1.0f);
+			UIView.SetAnimationDelay(1.0f);
+			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
+			((UIView)bv).Alpha = 1.0f;
+			UIView.CommitAnimations();
 
 		}
 
-
+		public void images_titleScroll()
+		{
+			//List<UIImageView> list_images = new UIImageView(this.Bounds);
+		}
 
 	}
 }

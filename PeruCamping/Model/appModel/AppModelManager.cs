@@ -7,13 +7,6 @@ using CoreFoundation;
 namespace PeruCamping
 {
 
-	public class Constantes
-	{
-		public static string STORE_CHANGED_STATUS_NOTIFICATION = "StoreChangedStatus";
-
-		public static float transitionTime = 0.4f;
-	}
-
 	public class AppModelManager: AppDelegate
 	{
 		public enum StoreStatusType{

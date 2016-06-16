@@ -1,0 +1,45 @@
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Info.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/starRating/starblack.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/starRating/starwhite.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Default-Landscape.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Default-Landscape@2x.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Default-Portrait.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Default-Portrait@2x.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/backgroundmuro.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/launchpad_h.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/launchpad_v.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/splashtop_h.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/splashtop_v.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/1header.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/2header.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/3header.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/4header.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/fondoselec.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/fondovidasilvestre.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/header4.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/select.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/Hitec/info.png
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperu 2.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperu.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuBooks.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuDate.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuInformation.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuNavegavitity 2.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuNavegavitity.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuStyle 2.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuStyle.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperuStyle_Ultimo.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperu_Background.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/Archive.wdgt/itourperu_MenuScroll.plist
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/en.lproj/InfoPlist.strings
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/en.lproj/Localizable.strings
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/optimized/es.lproj/Localizable.strings
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/bin/iPhoneSimulator/Debug/PeruCamping.exe.mdb
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/bin/iPhoneSimulator/Debug/PeruCamping.exe
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/PeruCamping.exe
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/obj/iPhoneSimulator/Debug/PeruCamping.exe.mdb
+/Users/mac/Documents/git projects/CampingIphone/PeruCamping/bin/iPhoneSimulator/Debug/Calabash.dll

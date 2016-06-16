@@ -44,7 +44,7 @@ namespace PeruCamping
 		UIChangeButton mainHome_;
 
 		//nfloat h = 750, w = 888, x = 82, y = 20;
-		nfloat h = 750, w = 888, x = 0, y = 0;
+		nfloat h = 667, w = 375, x = 0, y = 0;
 
 		protected ViewController(IntPtr handle) : base(handle)
 		{
@@ -70,7 +70,7 @@ namespace PeruCamping
 			this.View.BackgroundColor = UIColor.LightGray;
 
 			UIImageView background = new UIImageView(this.View.Bounds);
-			background.Image = UIImage.FromFile("Archive.wdgt/edutic/backgroundmuro.png");
+			background.Image = UIImage.FromFile("Archive.wdgt/Hitec/fondoblanco.jpg");
 
 
 

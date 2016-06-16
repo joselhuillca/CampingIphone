@@ -21,7 +21,7 @@ namespace PeruCamping
 
 		nfloat h = 150.0f;
 		nfloat w = 86.0f;
-		nfloat padding = 5.0f;
+		nfloat padding = 0.0f;
  		List<Avatar> items;
 		public UIComicCarousel(List<Avatar> objects, NSArray itemAttribute)
 		{
@@ -74,7 +74,7 @@ namespace PeruCamping
 			UITextView label = null;
 			UIImageView imageView = null;
 			view.AddGestureRecognizer (new UITapGestureRecognizer ((t) => {
-				tap(t, items[(int)index].navigability);
+				tap(t, items[(int)index].navigability,(int)index);
 
 			}));
 		 
@@ -83,7 +83,9 @@ namespace PeruCamping
 			imageView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
 			UIImage imgAvatar = UtilManagment.imageFromDocumentDirectory(new NSString(items[(int)index].imageAvatar));
-			imageView.Image = imgAvatar;
+			//ESCALAMOS La IMAGEN
+			imageView.Image = Constantes.ScaleToSize(imgAvatar,(int)w,(int)h);
+			//------------
 			imageView.ContentMode = UIViewContentMode.Center;
 
 			label = new UITextView(new CGRect(0, 114, w, 30));
@@ -112,12 +114,10 @@ namespace PeruCamping
 			nuint idxDraw = this.attributePositionToRedraw();
 			var colorAtt = this.getFontColorTitleAttribute();
 
-
-
 			carousel.Frame = this.Bounds;
 		}
 
-		public void tap(NSObject sender, string navUIView){       
+		public void tap(NSObject sender, string navUIView,int index){       
 			NSUrl fileURL =new NSUrl(NSBundle.MainBundle.PathForResource("sounds/select1","wav"));
 			this.managerController.audioController.playAudioWithUrl(fileURL);
 			 
@@ -127,7 +127,7 @@ namespace PeruCamping
 			}    
 		}
 
-
+		/*
 		public override void inAnimation()
 		{
 			base.inAnimation();
@@ -138,7 +138,7 @@ namespace PeruCamping
 		{
 			base.outAnimation();
 			base.outAnimationUpDownRightLeft(new CGRect(-1, 0, 1, 1), Constantes.transitionTime, 0, this);
-		}
+		}*/
 
 		public override void prepareRemove()
 		{
